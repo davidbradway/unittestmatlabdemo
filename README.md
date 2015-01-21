@@ -11,7 +11,10 @@ Based on tutorial at [http://www.mathworks.com/help/matlab/matlab_prog/write-scr
 
 To run the tests:
 ```matlab
+% In Matlab2014b
 resultScript = runtests('rightTriScriptTest');
+% In older Matlabs, you can run the script, but it doesn't see it as a unit test script
+rightTriScriptTest
 ```
 
 Create a table of test results:
