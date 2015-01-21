@@ -2,7 +2,7 @@
 
 To run all the tests for first example function "rightTri.m":
 ```matlab
-[rtScript, rtFunction, rtClass] = runalltests();
+[rtScript, rtFunction, rtClass] = runalltestsrightTri();
 ```
 
 ## Script-based unit testing
