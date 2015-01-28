@@ -5,5 +5,9 @@ function [odds,evens] = sortAndSplitEvenAndOdds(list)
 % numbers in the second output argument.
     
     % Error check the inputs
+    sortedList = sort(list);
+    evens = sortedList(mod(sortedList,2)== 0);
+    odds = sortedList(mod(sortedList,2) ==1);
+    
 end
 
