@@ -5,9 +5,18 @@ function [odds,evens] = sortAndSplitEvenAndOdds(list)
 % numbers in the second output argument.
     
     % Error check the inputs
-    sortedList = sort(list);
-    evens = sortedList(mod(sortedList,2)== 0);
-    odds = sortedList(mod(sortedList,2) ==1);
+    classes = {'numeric'};
+    attributes = {};
+    validateattributes(list,classes,attributes)
+
+    % flatten and sort input list
+    sortedList = sort(list(:));
+
+    % even numbers are divisible by 2 with no remainder
+    evens = sortedList(mod(sortedList,2) == 0);
+
+    % odd numbers divided by 2 have remainder of 1
+    odds = sortedList(mod(sortedList,2) == 1);
     
 end
 
